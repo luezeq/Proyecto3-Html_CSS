@@ -1,0 +1,331 @@
+/* custom properties */
+:root {
+    --color1: #784d3c; /*color principal*/
+    --blanco: #fff; /*color blanco*/
+    --negro: #000; /*color negro*/
+    --gris: rgb(224, 224, 224); /*color gris*/
+
+    --fp: 'PT Sans', sans-serif; /*fuente principal*/
+    --fs: 'Open Sans', sans-serif; /*fuente secundaria*/
+    --ft: ; /*fuente terciaria*/
+
+}
+
+/* Seteos generales*/
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /*Para que 1rem = 10px*/
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+
+body {
+    background-color: #f8f5db;
+    font-family: var(--fs);
+    font-size: 1.6rem;
+    line-height: 2; /* Para los blogs recomendable, sino 1.5*/
+}
+
+/* Enlaces */
+a {
+    text-decoration: none;
+}
+
+
+.contenedor {
+    width: min(90%, 120rem);
+    margin: 0 auto;
+}
+
+/*Seteos a los headings*/
+h1, h2, h3, h4 {
+    font-family: var(--fp);
+    line-height: 1.2;
+}
+
+h1 {font-size: 4.8rem;}
+
+h2 {font-size: 4rem;}
+
+h3 {font-size: 3.2rem;}
+
+h4 {font-size: 2.8rem;}
+
+/* Imágenes */
+img {width: 100%;}
+
+/* Utilidades */
+.no-margin {margin: 0;}
+
+.no-padding {padding: 0;}
+
+.centrar-texto {text-align: center;}
+
+
+/* Header imagen */
+.webp .header {
+    background-image: url(../img/banner.webp);
+}
+
+.no-webp .header {
+    background-image: url(../img/banner.jpg);
+}
+
+.header {
+    background-image: url(../img/banner.jpg); /*Ruta de la imagen*/
+    height: 60rem; /*Altura de la imagen*/
+    background-size: cover; /*Para que cubra todo el ancho*/
+    background-repeat: no-repeat; /*Para que no se repitan las imágenes*/
+    background-position: center center; /*Para que se centre la imagen al achicar la resolución (izq der)*/
+}
+
+/* Header logo */
+.logo {
+    color: var(--blanco);
+}
+
+.logo__reg {
+    font-weight: normal;
+}
+
+.logo__bold {
+    font-weight: 700;
+    color: #B9947D;
+}
+
+/* Header nav */
+@media (min-width: 768px) {
+    .nav {
+        display: flex;
+        gap: 2rem;
+    }
+}
+
+.navegacion__enlace {
+    display: block;
+    text-align: center;
+    margin: 2rem;
+    font-size: 1.8rem;
+    color: var(--blanco);
+    text-decoration: none;
+}
+
+.nav a:hover {
+    background-color: #B9947D;
+    color: #252B2B;
+    font-weight: 700;
+    padding: .5rem;
+    border-radius: .5rem;
+}
+
+
+/* Header barra */
+.barra {
+    padding-top: 3rem;
+}
+@media (min-width: 768px) {
+    .barra {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+/* Header h1 */
+.header__texto {
+    color: var(--blanco);
+    margin-top: 5rem;
+}
+
+@media (min-width: 768px) {
+    .header__texto {
+        margin-top: 15rem;
+    }
+}
+
+.parrafo-header {
+    font-size: 1.8rem;
+}
+
+/*boton blog*/
+.boton {
+    display: block; /*Para que ocupe todo el ancho*/
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-family: var(--fp);
+    padding: .5rem 1.5rem;
+    margin-bottom: 2rem;
+    border: 1px solid black;
+    border-radius: .5rem;
+    
+}
+
+@media (min-width: 768px) {
+    .boton {
+        display: inline-block; /*Para que se haga mas chico y respete el margin asignado*/ 
+    }
+}
+
+.boton--blog {
+    background-color: #252B2B;
+    color: #B9947D;
+}
+
+.boton--blog:hover {
+    background-color: #B9947D;
+    color: #252B2B;
+    cursor: pointer;
+    
+}
+
+.boton--aside {
+    background-color: #B9947D;
+    color: #252B2B;
+}
+
+.boton--aside:hover {
+    background-color: #252B2B;
+    color: #B9947D;
+    cursor: pointer;
+}
+
+
+/*blog*/
+@media (min-width: 768px) {
+    .contenido-principal {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 10rem;
+    }
+}
+
+.entrada {
+    border-bottom: 1px solid #252B2B;
+    margin: 3rem 0;
+}
+
+.entrada:last-of-type {
+    border: none;
+    margin-bottom: 0;
+}
+
+/*aside*/
+.cursos {
+    list-style: none;
+}
+
+.curso-café {
+    border-bottom: 1px solid #252B2B;
+    margin-bottom: 5rem;
+}
+
+.curso-café:last-of-type {
+    border: none;
+    margin-bottom: 0;
+}
+
+.curso-cafe__label {
+    font-family: var(--fp);
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.curso-cafe__info {
+    font-weight: normal;
+}
+
+/*footer*/
+.footer {
+    background-color: var(--negro);
+    margin-top: 5rem; 
+    padding-bottom: 3rem;
+}
+
+.logo-footer__reg {
+    color: white;
+    font-weight: normal;
+}
+
+.logo-footer__bold {
+    color: #B9947D;
+    font-weight: bold;
+}
+
+
+
+/*nosotros.hmtl*/
+@media (min-width: 768px) {
+    .nosotros {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 5rem;
+    }
+}
+
+.nosotros__texto {
+    font-weight: 700;
+}
+
+/*cursos.html*/
+@media (min-width: 768px) {
+    .cursos {
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+    }
+    
+    .cursos__grid {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 5rem;
+    }
+}
+
+.curso-cafe__agotado {
+    color: red;
+}
+
+/*entrada.html*/
+.blog-texto {
+    font-weight: 700;
+}
+
+/*contacto.html*/
+.form-image {
+    background-image: url(../img/contacto.jpg);
+    height: 40rem;
+    background-size: cover;
+}
+
+.form {
+    background-color: var(--gris);
+    margin: -5rem auto 0 auto;
+    width: 95%;
+    padding: 5rem;
+}
+
+.campo {
+    display: flex;
+    margin-bottom: 3rem;
+
+}
+
+.campo__label {
+    flex: 0 0 9rem;
+    text-align: right;
+    padding-right: 3rem;
+    font-weight: 700;
+}
+
+.campo__field {
+    flex: 1;
+    border: 1px solid rgb(189, 189, 189);
+}
+
+.campo__field--textarea {
+    height: 20rem;
+}
